@@ -100,9 +100,9 @@ Models were chosen for **low latency, multilingual accuracy, and cost efficiency
 │ Backend (API Routes)   │
 │  - Chat Processing     │
 │  - Translation Logic   │
-│  - Recommendation API │
-│  - Cart & Order API   │
-│  - Sales Analytics API│
+│  - Recommendation API  │
+│  - Cart & Order API    │
+│  - Sales Analytics API │
 │  - Auth Guard          │
 └───────────┬────────────┘
             │
@@ -112,13 +112,13 @@ Models were chosen for **low latency, multilingual accuracy, and cost efficiency
 ┌───────────────┐  ┌───────────────────┐
 │  OpenAI APIs  │  │     Supabase      │
 │               │  │ (PostgreSQL + Auth)│
-│ - GPT-4o-mini │  │ - Users (OTP Auth)│
-│   • Chat      │  │ - Products        │
-│   • Translation│ │ - Categories      │
-│   • Analytics │  │ - Orders          │
-│ - Whisper API │  │ - Order Items     │
-│   • Speech →  │  │ - Sales Data      │
-│     Text      │  │                   │
+│ - GPT-4o-mini │  │ - Users (OTP Auth) │
+│   • Chat      │  │ - Products         │
+│   • Translation│ │ - Categories       │
+│   • Analytics │  │ - Orders           │
+│ - Whisper API │  │ - Order Items      │
+│   • Speech →  │  │ - Sales Data       │
+│     Text      │  │                    │
 └───────────────┘  └───────────────────┘
 
 
