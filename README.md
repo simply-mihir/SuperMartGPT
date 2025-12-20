@@ -77,29 +77,11 @@ Models were chosen for **low latency, multilingual accuracy, and cost efficiency
 
 ## 🏗 Architecture Overview
 
-graph TD
-    subgraph Client_Layer [Frontend - Next.js]
-        User((User)) --> UI[Chat UI / Language Selector / Voice Input]
-        UI --> Components[Product Cards / Cart & Order / Admin Analytics]
-    end
-
-    subgraph Logic_Layer [Backend - API Routes]
-        Components --> Auth{Auth Guard}
-        Auth --> CP[Chat Processing]
-        Auth --> TL[Translation Logic]
-        Auth --> RA[Recommendation API]
-        Auth --> CO[Cart & Order API]
-        Auth --> SA[Sales Analytics API]
-    end
-
-    subgraph Data_AI_Layer [Services & Database]
-        CP & TL & RA --> AI[OpenAI APIs: GPT-4o-mini / Whisper]
-        CO & SA & Auth --> DB[(Supabase: PostgreSQL + Auth)]
-    end
-
-    style Client_Layer fill:#f9f,stroke:#333,stroke-width:2px
-    style Logic_Layer fill:#bbf,stroke:#333,stroke-width:2px
-    style Data_AI_Layer fill:#dfd,stroke:#333,stroke-width:2px
+Layer,Technologies,Key Responsibilities
+Frontend,"Next.js, Tailwind","Chat UI, Voice Input (Mic), Product Discovery, Admin Dashboard"
+Backend,Next.js API Routes,"Translation Logic, Chat Processing, Sales Analytics, Auth Guard"
+AI / Services,OpenAI (GPT-4o-mini),"Speech-to-Text (Whisper), Text Generation, Recommendations"
+Database,Supabase (PostgreSQL),"User Auth (OTP), Order History, Sales Data, Product Catalog"
 
 ## 🔐 Authentication & Security
 
