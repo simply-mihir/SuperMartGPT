@@ -77,61 +77,29 @@ Models were chosen for **low latency, multilingual accuracy, and cost efficiency
 
 ## 🏗 Architecture Overview
 
-┌────────────────────────┐
-│        User            │
-│  (Customer / Admin)    │
-└───────────┬────────────┘
-            │
-            │ Text / Voice / Language Selection
-            ▼
-┌────────────────────────┐
-│   Frontend (Next.js)   │
-│  - Chat UI             │
-│  - Language Selector   │
-│  - Voice Input (Mic)   │
-│  - Product Cards       │
-│  - Cart & Order UI     │
-│  - Admin Analytics UI  │
-└───────────┬────────────┘
-            │
-            │ API Requests
-            ▼
-┌────────────────────────┐
-│ Backend (API Routes)   │
-│  - Chat Processing     │
-│  - Translation Logic   │
-│  - Recommendation API  │
-│  - Cart & Order API    │
-│  - Sales Analytics API │
-│  - Auth Guard          │
-└───────────┬────────────┘
-            │
-   ┌────────┴─────────┐
-   │                  │
-   ▼                  ▼
-┌───────────────┐  ┌───────────────────┐
-│  OpenAI APIs  │  │     Supabase      │
-│               │  │ (PostgreSQL + Auth)│
-│ - GPT-4o-mini │  │ - Users (OTP Auth) │
-│   • Chat      │  │ - Products         │
-│   • Translation│ │ - Categories       │
-│   • Analytics │  │ - Orders           │
-│ - Whisper API │  │ - Order Items      │
-│   • Speech →  │  │ - Sales Data       │
-│     Text      │  │                    │
-└───────────────┘  └───────────────────┘
+graph TD
+    subgraph Client_Layer [Frontend - Next.js]
+        User((User)) --> UI[Chat UI / Language Selector / Voice Input]
+        UI --> Components[Product Cards / Cart & Order / Admin Analytics]
+    end
 
+    subgraph Logic_Layer [Backend - API Routes]
+        Components --> Auth{Auth Guard}
+        Auth --> CP[Chat Processing]
+        Auth --> TL[Translation Logic]
+        Auth --> RA[Recommendation API]
+        Auth --> CO[Cart & Order API]
+        Auth --> SA[Sales Analytics API]
+    end
 
-## 🗂 Database (Supabase)
+    subgraph Data_AI_Layer [Services & Database]
+        CP & TL & RA --> AI[OpenAI APIs: GPT-4o-mini / Whisper]
+        CO & SA & Auth --> DB[(Supabase: PostgreSQL + Auth)]
+    end
 
-Key tables used:
-- products
-- categories
-- orders
-- order_items
-- sales_data (demo + real)
-- users (managed by Supabase Auth)
-
+    style Client_Layer fill:#f9f,stroke:#333,stroke-width:2px
+    style Logic_Layer fill:#bbf,stroke:#333,stroke-width:2px
+    style Data_AI_Layer fill:#dfd,stroke:#333,stroke-width:2px
 
 ## 🔐 Authentication & Security
 
