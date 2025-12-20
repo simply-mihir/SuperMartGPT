@@ -75,14 +75,6 @@ Models were chosen for **low latency, multilingual accuracy, and cost efficiency
 **Deployment**
 - Vercel
 
-## 🏗 Architecture Overview
-
-Layer,Technologies,Key Responsibilities
-Frontend,"Next.js, Tailwind","Chat UI, Voice Input (Mic), Product Discovery, Admin Dashboard"
-Backend,Next.js API Routes,"Translation Logic, Chat Processing, Sales Analytics, Auth Guard"
-AI / Services,OpenAI (GPT-4o-mini),"Speech-to-Text (Whisper), Text Generation, Recommendations"
-Database,Supabase (PostgreSQL),"User Auth (OTP), Order History, Sales Data, Product Catalog"
-
 ## 🔐 Authentication & Security
 
 - Email OTP authentication using Supabase Auth  
