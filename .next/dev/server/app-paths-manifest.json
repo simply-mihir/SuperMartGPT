@@ -1,0 +1,8 @@
+{
+  "/api/admin/analytics/route": "app/api/admin/analytics/route.js",
+  "/api/cart/add/route": "app/api/cart/add/route.js",
+  "/api/chat/route": "app/api/chat/route.js",
+  "/api/orders/place/route": "app/api/orders/place/route.js",
+  "/api/products/bestsellers/route": "app/api/products/bestsellers/route.js",
+  "/page": "app/page.js"
+}

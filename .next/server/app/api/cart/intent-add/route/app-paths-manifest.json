@@ -1,0 +1,3 @@
+{
+  "/api/cart/intent-add/route": "app/api/cart/intent-add/route.js"
+}

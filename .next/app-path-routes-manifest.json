@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/admin/analytics/route": "/api/admin/analytics",
+  "/api/cart/[userId]/route": "/api/cart/[userId]",
+  "/api/cart/add/route": "/api/cart/add",
+  "/api/cart/intent-add/route": "/api/cart/intent-add",
+  "/api/cart/remove/route": "/api/cart/remove",
+  "/api/categories/route": "/api/categories",
+  "/api/chat/route": "/api/chat",
+  "/api/orders/place/route": "/api/orders/place",
+  "/api/orders/route": "/api/orders",
+  "/api/products/bestsellers/route": "/api/products/bestsellers",
+  "/api/products/recommend/route": "/api/products/recommend",
+  "/api/products/search/route": "/api/products/search",
+  "/api/translate/route": "/api/translate",
+  "/api/user/profile/route": "/api/user/profile",
+  "/api/voice/route": "/api/voice",
+  "/page": "/"
+}

@@ -1,0 +1,48 @@
+[00:00:00.977] Server  LOG      ✓ Ready in 647ms
+[00:00:08.780] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.011] Browser LOG     [Auth] Auth state changed: INITIAL_SESSION
+[00:00:09.775] Server  LOG     [/api/products/bestsellers] incoming request {}
+[00:00:09.785] Server  LOG     [/api/products/bestsellers] incoming request {}
+[00:00:11.237] Server  LOG     [/api/products/bestsellers] raw rows fetched {}
+[00:00:11.239] Server  LOG     [/api/products/bestsellers] bestseller candidates {}
+[00:00:11.240] Server  LOG     [/api/products/bestsellers] response summary {}
+[00:00:11.248] Server  LOG     [/api/products/bestsellers] raw rows fetched {}
+[00:00:11.249] Server  LOG     [/api/products/bestsellers] bestseller candidates {}
+[00:00:11.251] Server  LOG     [/api/products/bestsellers] response summary {}
+[00:00:11.360] Browser LOG     [useBestsellers] Loaded: 10 items
+[00:00:11.360] Browser LOG     [useBestsellers] Loaded: 10 items
+[00:00:26.949] Browser LOG     [CartDrawer] Placing order with items: [{"name":"Lay's Chips 90g","price":30,"productId":"23","quantity":1}]
+[00:00:26.990] Server  LOG     [/api/orders/place] Received request
+[00:00:26.992] Server  LOG     [/api/orders/place] No authentication provided
+[00:00:27.099] Browser LOG     [CartDrawer] Order response: {"error":"You must be logged in to place an order.","success":false} Status: 401
+[00:01:28.582] Browser LOG     [Auth] Auth state changed: SIGNED_IN
+[00:01:33.343] Server  LOG     [/api/orders/place] Received request
+[00:01:33.434] Browser LOG     [CartDrawer] Placing order with items: [{"name":"Lay's Chips 90g","price":30,"productId":"23","quantity":1}]
+[00:01:34.878] Server  LOG     [/api/orders/place] Authenticated user: "a47d3166-654b-44e9-9c4c-dc8b8025f174"
+[00:01:34.879] Server  LOG     [/api/orders/place] Generated orderId: "ORD-MIUG1ZMM-ZBXM5E"
+[00:01:34.880] Server  LOG     [/api/orders/place] Inserting order: "{\n  \"total_amount\": 30\n}"
+[00:01:35.350] Server  LOG     [/api/orders/place] Order inserted successfully: {}
+[00:01:35.351] Server  LOG     [/api/orders/place] Inserting order items: "[\n  {\n    \"order_id\": \"ac754fba-dc25-4c94-a868-595783bebb2b\",\n    \"product_id\": \"23\",\n    \"quantity\": 1,\n    \"price_at_purchase\": 30\n  }\n]"
+[00:01:35.638] Server  LOG     [/api/orders/place] Order items inserted successfully
+[00:01:35.752] Browser LOG     [CartDrawer] Order response: {"itemCount":1,"message":"Order placed successfully","orderId":"ORD-MIUG1ZMM-ZBXM5E","success":true,"total":30} Status: 200
+[00:01:41.457] Browser LOG     [Auth] Auth state changed: SIGNED_OUT
+[00:01:49.369] Browser LOG     📤 Sending chat message: I am admin
+[00:01:49.520] Server  LOG     [CHAT] Processing message: "I am admin" "Language:" "en-US"
+[00:01:49.522] Server  LOG     [CHAT] Admin mode detected - showing analytics directly
+[00:01:49.632] Browser LOG     📥 Response received: {"isAdminMode":true,"relatedProducts":[],"reply":"📊 Opening Sales Analytics Dashboard...","success":true}
+[00:01:54.488] Server  LOG     [/api/admin/analytics] GET request received
+[00:01:54.499] Server  LOG     [/api/admin/analytics] GET request received
+[00:01:55.090] Server  LOG     REAL revenue: 1640
+[00:01:55.092] Server  LOG     REAL units: 8
+[00:01:55.244] Server  LOG     REAL revenue: 1640
+[00:01:55.244] Server  LOG     REAL units: 8
+[00:01:55.273] Server  LOG     DEMO revenue: 177965
+[00:01:55.273] Server  LOG     DEMO units: 2494
+[00:01:55.274] Server  LOG     FINAL combined: {}
+[00:01:55.486] Server  LOG     DEMO revenue: 177965
+[00:01:55.487] Server  LOG     DEMO units: 2494
+[00:01:55.487] Server  LOG     FINAL combined: {}
+[00:01:56.952] Server  LOG     [/api/admin/analytics] Analytics computed: {}
+[00:01:56.955] Server  LOG     [/api/admin/analytics] Analytics computed: {}
+[00:01:57.104] Browser LOG     [AdminAnalytics] API Response: {"categoryBreakdown":[{"category":"Demo Products","revenue":177965,"units_sold":2494},{"category":"Orders","revenue":1640,"units_sold":8}],"recommendations":["Focus on promoting the top-selling products through targeted marketing campaigns to drive further sales.","Consider expanding the product range within the top category of Demo Products to capitalize on its popularity.","Implement bundle deals or promotions featuring the top products to increase average order value and customer engagement."],"success":true,"topProducts":[{"product_name":"Chips","revenue":16350,"units_sold":545},{"product_name":"Bananas","revenue":25725,"units_sold":525},{"product_name":"Cookies","revenue":20475,"units_sold":455},{"product_name":"Fresh Bread","revenue":19110,"units_sold":390},{"product_name":"Organic Milk","revenue":26035,"units_sold":302}],"totalRevenue":179605,"totalUnits":2502,"unitsSold":2502}
+[00:01:57.104] Browser LOG     [AdminAnalytics] API Response: {"categoryBreakdown":[{"category":"Demo Products","revenue":177965,"units_sold":2494},{"category":"Orders","revenue":1640,"units_sold":8}],"recommendations":["Focus on promoting top-selling products like Chips, Bananas, and Cookies to drive more sales.","Consider expanding the range of Demo Products as it is the top-selling category.","Implement targeted marketing campaigns to boost sales of Fresh Bread and Organic Milk."],"success":true,"topProducts":[{"product_name":"Chips","revenue":16350,"units_sold":545},{"product_name":"Bananas","revenue":25725,"units_sold":525},{"product_name":"Cookies","revenue":20475,"units_sold":455},{"product_name":"Fresh Bread","revenue":19110,"units_sold":390},{"product_name":"Organic Milk","revenue":26035,"units_sold":302}],"totalRevenue":179605,"totalUnits":2502,"unitsSold":2502}

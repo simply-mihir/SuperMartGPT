@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/cart/[userId]": {},
+    "/api/cart/add": {},
+    "/api/cart/remove": {},
+    "/api/categories": {},
+    "/api/admin/analytics": {},
+    "/api/products/bestsellers": {},
+    "/api/orders/place": {},
+    "/api/products/recommend": {},
+    "/api/orders": {},
+    "/api/products/search": {},
+    "/api/translate": {},
+    "/api/voice": {},
+    "/api/user/profile": {},
+    "/api/chat": {},
+    "/api/cart/intent-add": {}
+  }
+}
